@@ -1,0 +1,29 @@
+{
+    "app": {
+        "background": {
+            "page": "background.html"
+        }
+    },
+
+    "manifest_version": 2,
+    "name": "__MSG_extensionName__",
+    "version": "0.1",
+
+    "default_locale": "en",
+    "description": "A driver for WACOM graphics tablets.",
+    "icons": {
+        "16" : "icon16.png",
+        "16" : "icon32.png",
+        "48" : "icon48.png",
+        "48" : "icon64.png",
+        "128": "icon128.png"
+    },
+
+    "permissions": [
+        "usb",
+        {"usbDevices": [{
+            "vendorId": 1386,
+            "productId": 23
+        }]}
+    ]
+}
