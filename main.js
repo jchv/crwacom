@@ -22,7 +22,7 @@ function wacomGetReport(wacom, type, id, size, callback, errback, tries)
         if (info.resultCode == 0)
             callback(info.data);
         else
-            wacomGetReport(wacom, type, id, callback, tries - 1);
+            wacomGetReport(wacom, type, id, callback, errback, tries - 1);
     });
 }
 
@@ -48,7 +48,7 @@ function wacomSetReport(wacom, type, id, data, callback, errback, tries)
         if (info.resultCode == 0)
             callback(info.data);
         else
-            wacomSetReport(wacom, type, id, data, callback, tries - 1);
+            wacomSetReport(wacom, type, id, data, callback, errback, tries - 1);
     });
 }
 
